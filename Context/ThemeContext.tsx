@@ -1,8 +1,8 @@
 import React, {createContext, useState, useContext, useEffect} from "react";
-import {_retrieveData, _storeData} from "@StorageController";
-import {light, dark} from "@ColorConstants";
+import {_retrieveData, _storeData} from "../utils/storageController";
+import {light, dark} from "../utils/Colors";
 const ThemeContextValue = createContext();
-import {ModeKey} from "@ConstantsValues";
+import {ModeKey} from "../utils/ConstantValues";
 export const ThemeContext = ({children}) => {
   useEffect(() => {
     getTheme();

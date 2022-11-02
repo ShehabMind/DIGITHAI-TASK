@@ -2,6 +2,6 @@
 import React from "react";
 import HomeSimpleView from "./view";
 
-export const HomeSimple = (props: any) => {
+export const HomeSimpleScreen = (props: any) => {
   return <HomeSimpleView {...props} />;
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import {useTheme} from "@ThemeContext";
+import {useTheme} from "../Context/ThemeContext";
 type Props = {};
 
 export default function ThemeWrapper({children}) {

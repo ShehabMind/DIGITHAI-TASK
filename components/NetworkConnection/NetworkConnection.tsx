@@ -1,6 +1,5 @@
 import NetInfo from "@react-native-community/netinfo";
 import {scaleHeight, scaleWidth} from "../../utils/scaling";
-import {strings} from "@Localization";
 import * as React from "react";
 import {StyleSheet, Modal, View, Image} from "react-native";
 import {CustomText} from "../CustomText";
@@ -30,15 +29,15 @@ export const NetworkConnection = () => {
       <CustomLayout>
         <View style={styles.centeredView}>
           <Image
-            source={require("../../assets/images/musala.jpg")}
+            source={require("../../assets/images/digithaiLogoNetwork.jpeg")}
             style={styles.offlineImage}
             resizeMode="contain"
           />
           <CustomText color="black" marginTop={32}>
-            {strings("NoConnection")}
+            NoConnection
           </CustomText>
           <CustomText color="black" marginTop={32}>
-            {strings("CheckInternet")}
+            CheckInternet
           </CustomText>
         </View>
         <CustomButton
@@ -46,7 +45,7 @@ export const NetworkConnection = () => {
           style={styles.refreshBtn}
           onPress={onRefresh}
         >
-          <CustomText color="black"> {strings("TestConnection")}</CustomText>
+          <CustomText color="black"> TestConnection</CustomText>
         </CustomButton>
       </CustomLayout>
     </Modal>
