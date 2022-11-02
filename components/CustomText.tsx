@@ -1,4 +1,4 @@
-import {light, dark} from "@ColorConstants/";
+import {light, dark} from "../utils/Colors";
 import {scaleFontSize} from "../utils/scaling";
 import * as React from "react";
 import {Text, StyleSheet, TextProps} from "react-native";

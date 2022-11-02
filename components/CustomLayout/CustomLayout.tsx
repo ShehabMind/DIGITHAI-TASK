@@ -1,6 +1,5 @@
 import React from "react";
 
-// import { selectIsDark } from '@store/slices/themSlice';
 import {
   View,
   ScrollView,
@@ -9,12 +8,9 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
-// import { useSelector } from 'react-redux';
 
 import styles from "./styles";
 export const CustomLayout = ({style, scrollEnabled, children}: any) => {
-  // const isDark = useSelector(selectIsDark);
-
   return (
     <SafeAreaView style={styles.safeAreaView}>
       <StatusBar

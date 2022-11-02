@@ -1,6 +1,6 @@
 import {View, Text, StatusBar} from "react-native";
 import React from "react";
-import {useTheme} from "@ThemeContext";
+import {useTheme} from "../Context/ThemeContext";
 type Props = {};
 
 const CustomStatusBar = (props: Props) => {
