@@ -38,18 +38,18 @@ function RootNavigator() {
         component={BottomTabNavigator}
         options={{headerShown: false}}
       />
-      <Stack.Screen
-        name="DescriptionModal"
-        component={DescriptionModalScreen}
-        options={{headerShown: false}}
-      />
+
       <Stack.Screen
         name="HomeSimple"
         component={HomeSimpleScreen}
         options={{headerShown: false}}
       />
       <Stack.Group screenOptions={{presentation: "modal"}}>
-        <Stack.Screen name="Modal" component={DescriptionModalScreen} />
+        <Stack.Screen
+          name="DescriptionModal"
+          component={DescriptionModalScreen}
+          options={{headerShown: false}}
+        />
       </Stack.Group>
     </Stack.Navigator>
   );

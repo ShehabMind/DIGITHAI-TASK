@@ -94,7 +94,7 @@ const HomeSimpleView = ({navigation}) => {
                 <VStack style={{width: "80%"}}>
                   <Text
                     onPress={() => {
-                      navigation.navigate("Detailed", {
+                      navigation.navigate("DescriptionModal", {
                         item: item,
                       });
                     }}

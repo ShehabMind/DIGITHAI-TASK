@@ -47,7 +47,7 @@ const HomeView: React.FC<{
   index: number;
 }> = ({item, index}) => {
   const navigation: any = useNavigation();
-
+  const [modalVisible, setModalVisible] = useState(false);
   ///
   const [Search, setSearch] = useState("");
   const {theme} = useTheme();
@@ -234,11 +234,14 @@ const HomeView: React.FC<{
                 </CustomText>
                 <CustomButton
                   marginTop={15}
-                  // onPress={() => {
-                  //   navigation.navigate("Detailed", {item: item, index: index});
-                  // }}
+                  onPress={() => {
+                    navigation.navigate("DescriptionModal", {
+                      item: item,
+                      index: index,
+                    });
+                  }}
                 >
-                  <CustomText color={"#60935F"}>ReadMore</CustomText>
+                  <CustomText color={"#60935F"}>Read More</CustomText>
                 </CustomButton>
               </Animated.View>
               <View style={{marginBottom: 150}} />
