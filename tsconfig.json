@@ -1,6 +1,15 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@Localization": ["./Localization/index.ts"],
+      "@ColorConstants": ["./utils/Colors.ts"],
+      "@ConstantsValues": ["./utils/ConstantValues.ts"],
+      "@StorageController": ["./utils/storageController.ts"],
+      "@ThemeContext": ["./Context/ThemeContext.tsx"],
+      "@Types": ["/types.tsx"]
+    }
   }
 }
