@@ -238,6 +238,7 @@ const HomeView: React.FC<{
                 <CustomText textAlign="left" color={"#4C6877"} size={17}>
                   {Books.subtitle?.slice(0, 50)}
                 </CustomText>
+
                 <CustomButton
                   style={{borderColor: "#282B78"}}
                   marginTop={15}
