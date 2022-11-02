@@ -43,7 +43,7 @@ const DescriptionModalView: React.FC<{props: Route}> = ({}) => {
           style={styles.cross}
           name="arrow-left"
           size={24}
-          color="black"
+          color="#E01D01"
         />
       </TouchableOpacity>
       <ScrollView

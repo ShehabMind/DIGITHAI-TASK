@@ -65,7 +65,8 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        // tabBarActiveTintColor: Colors[colorScheme].tint,
+        tabBarActiveTintColor: "#36A96A",
+        tabBarInactiveTintColor: "#4C6877",
         headerShown: false,
         tabBarStyle: {
           backgroundColor: theme.background,
@@ -78,7 +79,8 @@ function BottomTabNavigator() {
           shadowColor: "white",
         },
         tabBarLabelStyle: {
-          fontSize: 15,
+          fontSize: 16,
+          fontWeight: "700",
         },
       }}
     >
@@ -86,10 +88,10 @@ function BottomTabNavigator() {
         name="Home"
         component={HomeScreen}
         options={({navigation}: RootTabScreenProps<"Home">) => ({
-          tabBarActiveTintColor: theme.tabIconSelected,
+          tabBarActiveTintColor: "#36A96A",
           title: "Home",
           tabBarIcon: ({color, focused}) => (
-            <TabBarIcon name="home" color={theme.tabIconDefault} />
+            <TabBarIcon name="home" color={"#36A96A"} />
           ),
         })}
       />
@@ -97,7 +99,7 @@ function BottomTabNavigator() {
         name="Settings"
         component={SettingsScreen}
         options={{
-          tabBarActiveTintColor: theme.tabIconSelected,
+          tabBarActiveTintColor: "#36A96A",
 
           title: "Settings",
           tabBarIcon: ({color}) => (

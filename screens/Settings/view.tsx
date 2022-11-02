@@ -26,8 +26,8 @@ const SettingView: React.FC<any> = ({item, index}) => {
           Change Theme
         </CustomText>
         <Switch
-          trackColor={{false: "#60935F", true: "#fff"}}
-          thumbColor={isEnabled ? "#60935F" : "#f4f3f4"}
+          trackColor={{false: "#282B78", true: "#fff"}}
+          thumbColor={isEnabled ? "#282B78" : "#f4f3f4"}
           ios_backgroundColor="#3e3e3e"
           onValueChange={toggleSwitch}
           value={isEnabled}

@@ -102,7 +102,7 @@ const HomeSimpleView = ({navigation}) => {
                   >
                     {item.volumeInfo.title}
                   </Text>
-                  <Text style={[styles.Title, {color: "gray"}]}>
+                  <Text style={[styles.Title, {color: "#4C6877"}]}>
                     {item.volumeInfo.subtitle
                       ? item.volumeInfo.subtitle?.slice(0, 50)
                       : "no Subtitle found"}
@@ -134,6 +134,7 @@ const styles = StyleSheet.create({
   containerDark: {backgroundColor: "#212121"},
   Title: {
     fontSize: 15,
+    fontWeight: "bold",
   },
   titleDark: {color: "#FEFEFE"},
   titleLight: {color: "#212121"},

@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
   cross: {
     height: 34,
     width: 34,
-    color: "white",
   },
   posterImage: {
     width: SCREEN_WIDTH * 0.9,
@@ -75,10 +74,10 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   link: {
-    color: "#0052A1",
+    color: "#282B78",
     textDecorationLine: "underline",
     textDecorationStyle: "solid",
-    textDecorationColor: "#0052A1",
+    textDecorationColor: "#282B78",
   },
 });
 

@@ -29,7 +29,7 @@ export const NetworkConnection = () => {
       <CustomLayout>
         <View style={styles.centeredView}>
           <Image
-            source={require("../../assets/images/digithaiLogoNetwork.jpeg")}
+            source={require("../../assets/images/Digithai.jpeg")}
             style={styles.offlineImage}
             resizeMode="contain"
           />

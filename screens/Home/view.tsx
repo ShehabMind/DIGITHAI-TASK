@@ -140,17 +140,22 @@ const HomeView: React.FC<{
           style={{
             position: "absolute",
             zIndex: 1,
-            top: 15,
+            top: 20,
             left: 100,
             width: SCREEN_WIDTH * 0.5,
             backgroundColor: "rgba(255,255,255,0.6)",
+            borderColor: "#282B78",
           }}
           onPress={() => {
             navigation.navigate("HomeSimple");
           }}
         >
-          <CustomText textAlign="center" color={"black"}>
-            Normal List
+          <CustomText
+            textAlign="center"
+            color={"#282B78"}
+            style={{fontWeight: "700"}}
+          >
+            Book list (Standard)
           </CustomText>
         </CustomButton>
       </View>
@@ -226,13 +231,15 @@ const HomeView: React.FC<{
                   color={theme.text}
                   size={17}
                   numberOfLines={5}
+                  style={{fontWeight: "bold"}}
                 >
                   {Books.title}
                 </CustomText>
-                <CustomText textAlign="left" color={"gray"} size={17}>
+                <CustomText textAlign="left" color={"#4C6877"} size={17}>
                   {Books.subtitle?.slice(0, 50)}
                 </CustomText>
                 <CustomButton
+                  style={{borderColor: "#282B78"}}
                   marginTop={15}
                   onPress={() => {
                     navigation.navigate("DescriptionModal", {
@@ -241,7 +248,9 @@ const HomeView: React.FC<{
                     });
                   }}
                 >
-                  <CustomText color={"#60935F"}>Read More</CustomText>
+                  <CustomText style={{fontWeight: "600"}} color={"#36A96A"}>
+                    Read More
+                  </CustomText>
                 </CustomButton>
               </Animated.View>
               <View style={{marginBottom: 150}} />

@@ -9,6 +9,7 @@ import Navigation from "./navigation";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {LogBox} from "react-native";
 import CustomStatusBar from "./components/CustomStatusBar";
+import {NetworkConnection} from "./components/NetworkConnection/NetworkConnection";
 export default function App() {
   LogBox.ignoreLogs(["EventEmitter.removeListener"]);
   const isLoadingComplete = useCachedResources();
@@ -23,6 +24,7 @@ export default function App() {
         <ThemeWrapper>
           <QueryClientProvider client={queryClient}>
             <SafeAreaProvider>
+              <NetworkConnection />
               <Navigation colorScheme={colorScheme} />
               <CustomStatusBar />
             </SafeAreaProvider>
@@ -32,12 +34,3 @@ export default function App() {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
