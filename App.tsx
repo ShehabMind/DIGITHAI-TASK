@@ -8,6 +8,7 @@ import ThemeWrapper from "./components/ThemeWrapper";
 import Navigation from "./navigation";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {LogBox} from "react-native";
+import CustomStatusBar from "./components/CustomStatusBar";
 export default function App() {
   LogBox.ignoreLogs(["EventEmitter.removeListener"]);
   const isLoadingComplete = useCachedResources();
@@ -23,6 +24,7 @@ export default function App() {
           <QueryClientProvider client={queryClient}>
             <SafeAreaProvider>
               <Navigation colorScheme={colorScheme} />
+              <CustomStatusBar />
             </SafeAreaProvider>
           </QueryClientProvider>
         </ThemeWrapper>
