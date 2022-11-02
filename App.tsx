@@ -7,7 +7,9 @@ import {ThemeContext} from "./Context/ThemeContext";
 import ThemeWrapper from "./components/ThemeWrapper";
 import Navigation from "./navigation";
 import {QueryClient, QueryClientProvider} from "react-query";
+import {LogBox} from "react-native";
 export default function App() {
+  LogBox.ignoreLogs(["EventEmitter.removeListener"]);
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
   const queryClient = new QueryClient();
