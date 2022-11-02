@@ -6,9 +6,11 @@ import useColorScheme from "./hooks/useColorScheme";
 import {ThemeContext} from "./Context/ThemeContext";
 import ThemeWrapper from "./components/ThemeWrapper";
 import Navigation from "./navigation";
+import {QueryClient, QueryClientProvider} from "react-query";
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
+  const queryClient = new QueryClient();
 
   if (!isLoadingComplete) {
     return null;
@@ -16,9 +18,11 @@ export default function App() {
     return (
       <ThemeContext>
         <ThemeWrapper>
-          <SafeAreaProvider>
-            <Navigation colorScheme={colorScheme} />
-          </SafeAreaProvider>
+          <QueryClientProvider client={queryClient}>
+            <SafeAreaProvider>
+              <Navigation colorScheme={colorScheme} />
+            </SafeAreaProvider>
+          </QueryClientProvider>
         </ThemeWrapper>
       </ThemeContext>
     );
